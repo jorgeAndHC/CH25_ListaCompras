@@ -32,7 +32,6 @@ btnClaer.addEventListener("click", function (event) {
     contador= 0;
     totalEnProductos= 0;
     costoTotal= 0;
-    
     contadorProductos.innerText= "0";
     costoTotal.innerText= "0";
     precioTotal.innerText= "$ 0";
