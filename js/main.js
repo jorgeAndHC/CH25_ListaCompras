@@ -36,6 +36,10 @@ btnClaer.addEventListener("click", function (event) {
     costoTotal.innerText= "0";
     precioTotal.innerText= "$ 0";
 
+    localStorage.setItem("contadorProductos",contador);
+    localStorage.setItem("totalEnProductos",totalEnProductos);
+    localStorage.setItem("costoTotal",costoTotal.toFixed(2));
+
 
 });//click btnclear
 
@@ -114,6 +118,9 @@ btnAgregar.addEventListener("click", function (event) {
     productosTotal.innerHTML=totalEnProductos;
     costoTotal +=precio * parseFloat(txtNumber.value);
     precioTotal.innerHTML=`${costoTotal.toFixed(2)} `;
+    localStorage.setItem("contadorProductos",contador);
+    localStorage.setItem("totalEnProductos",totalEnProductos);
+    localStorage.setItem("costoTotal",costoTotal.toFixed(2));
     
     txtNombre.value="";
     txtNumber.value="";
