@@ -102,7 +102,7 @@ let txtNombre = document.getElementById ("Name");
             contadorProductos.innerText=contador;
             totalEnProductos += parseFloat(txtNumber.value);
             productosTotal.innerText=totalEnProductos;
-            costoTotal = precio * parseFloat(txtNumber.value);
+            costoTotal += precio * parseFloat(txtNumber.value);
             precioTotal.innerText = `$ ${costoTotal.toFixed(2)}`;
             localStorage.setItem("contadorProductos",contador);
             localStorage.setItem("totalEnProductos", totalEnProductos);
@@ -143,4 +143,5 @@ let txtNombre = document.getElementById ("Name");
         productosTotal.innerText=totalEnProductos;
         precioTotal.innerText= `$ ${costoTotal}`;
     });
+
 
