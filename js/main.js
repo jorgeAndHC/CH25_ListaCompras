@@ -103,10 +103,16 @@ let txtNombre = document.getElementById ("Name");
             totalEnProductos += parseFloat(txtNumber.value);
             productosTotal.innerText=totalEnProductos;
             costoTotal += precio * parseFloat(txtNumber.value);
+           
             precioTotal.innerText = `$ ${costoTotal.toFixed(2)}`;
-            localStorage.setItem("contadorProductos",contador);
-            localStorage.setItem("totalEnProductos", totalEnProductos);
-            localStorage.setItem("costoTotal", costoTotal.toFixed(2));
+          
+             let resumen =`{"contadorProductos" : ${contador},
+                            "totalEnProductos   : ${totalEnProductos},
+                            "costoTotal"        : ${costoTotal.toFixed(2)}}`;
+            localStorage.setItem("resumen", resumen);
+            // localStorage.setItem("contadorProductos",contador);
+            // localStorage.setItem("totalEnProductos", totalEnProductos);
+            // localStorage.setItem("costoTotal", costoTotal.toFixed(2));  guarda dentro de la parte del localstorage la informacion
             txtNombre.value=""; //limpiar campos
             txtNumber.value=""; //limpiar campos
             txtNombre.focus();
